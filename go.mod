@@ -1,4 +1,4 @@
-module github.com/steephseqq/maximprotos
+module github.com/steephseqq/maximprotos-auth
 
 go 1.25.1
 
