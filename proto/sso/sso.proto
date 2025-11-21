@@ -20,6 +20,12 @@ service Auth{
             body: "*"
         };
     };
+    rpc Verificate(VerificateRequest) returns (VerificateResponse){
+        option (google.api.http) = {
+            post: "/v1/verificate"
+            body: "*"
+        };
+    }
 }
 
 message RegisterRequest{
@@ -41,4 +47,13 @@ message LoginRequest{
 message LoginResponse{
     string token = 2;
     bool success = 3;
+}
+
+message VerificateRequest{
+    string email = 1;
+    string code = 2;
+}
+
+message VerificateResponse{
+    bool success = 1;
 }
